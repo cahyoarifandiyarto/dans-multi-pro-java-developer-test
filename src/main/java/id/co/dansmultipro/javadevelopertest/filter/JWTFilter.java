@@ -65,7 +65,8 @@ public class JWTFilter implements Filter {
             try {
                 Jwts.parserBuilder()
                         .setSigningKey(secretKey)
-                        .build();
+                        .build()
+                        .parseClaimsJws(accessToken);
 
                 filterChain.doFilter(servletRequest, servletResponse);
             } catch (JwtException ex) {
