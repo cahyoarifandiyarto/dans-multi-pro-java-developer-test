@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/java_developer_test
+    username: dansmultipro
+    password: dansmultipro
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+dansMultiPro:
+  baseUrl: http://dev3.dansmultipro.co.id
+  getJobListUrl: ${dansMultiPro.baseUrl}/api/recruitment/positions.json
+  getJobDetailUrl: ${dansMultiPro.baseUrl}/api/recruitment/positions/{id}
